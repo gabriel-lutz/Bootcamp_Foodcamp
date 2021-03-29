@@ -1,0 +1,56 @@
+
+h1{
+    font-family: 'Righteous', cursive;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.nome-site{
+    font-size: 44px;
+    color: #fff;
+}
+
+.topo{
+    height: 92px;
+    width: 100%;
+    background-color: #CF2B2B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 24px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.topo p{
+    color: #fff;
+    font-size: 18px;
+}
+
+.menu{
+    padding: 108px 0;
+    width: 100%;
+}
+
+.menu h1{
+    font-size: 26px;
+    color: #333;
+}
+.menu-sidescroll{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+.item:first-child{
+    margin-left: 19px;
+}
+
+.item{
+    width: 172px;
+    height: 216px;
+    background-color: red;;
+    margin-right: 16px;;
+}
