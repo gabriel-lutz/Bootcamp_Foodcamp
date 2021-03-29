@@ -1,4 +1,6 @@
-
+body{
+    background: #eee;
+}
 h1{
     font-family: 'Righteous', cursive;
 }
@@ -34,14 +36,15 @@ p{
     width: 100%;
 }
 
-.menu h1{
+.categoria h1{
     font-size: 26px;
     color: #333;
+    margin-left: 19px;
 }
 .menu-sidescroll{
-    overflow: hidden;
     width: 100%;
     display: flex;
+    overflow: scroll;
 }
 
 .item:first-child{
@@ -50,7 +53,35 @@ p{
 
 .item{
     width: 172px;
-    height: 216px;
-    background-color: red;;
-    margin-right: 16px;;
+    height: auto;
+    background-color: #fff;;
+    margin-right: 16px;
+    border-radius: 5%;
+    margin-top: 17px;
+}
+
+.item img{
+    width: 144px;
+    height: 87px;
+    margin: 18px 14px 0 14px;
+}
+.informacoes{
+    margin: 8px 14px 13px 14px;
+}
+
+.nome-prato{
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.descricao{
+    font-size: 15px;
+    color: #a6a6a6;
+}
+
+.valor{
+    font-size: 16px;
+    margin-top: 10px;
 }
