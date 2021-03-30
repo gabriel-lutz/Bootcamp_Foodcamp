@@ -24,6 +24,7 @@ p{
     position: fixed;
     top: 0;
     z-index: 1;
+    box-shadow: 0 0 10px 2px grey;
 }
 
 .topo p{
@@ -32,13 +33,13 @@ p{
 }
 
 .menu{
-    padding: 108px 0 78px;
+    padding: 128px 0 78px 0;
     width: 100%;
     height: auto;
  
 }
 .categoria{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .categoria h1{
@@ -63,6 +64,8 @@ p{
     margin-right: 16px;
     border-radius: 5%;
     margin-top: 17px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 2px 2px #e7e7e7;
 }
 
 .item img{
@@ -104,7 +107,10 @@ p{
 .msg{
     width: 364px;
     height: 61px;
-    border-radius: 30%;
+    border-top-left-radius: 30px 50%;
+    border-bottom-left-radius: 30px 50%;
+    border-top-right-radius: 30px 50%;
+    border-bottom-right-radius: 30px 50%;
     box-sizing: border-box;
     padding: 0 80px;
     background-color: #CBCBCB;
