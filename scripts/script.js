@@ -6,35 +6,72 @@ let total = comida + bebida + sobremesa
 
 function selecionar(categoria, item){
    
-    const deselecionar = document.querySelector(".menu .categoria:nth-child("+ categoria +") .menu-sidescroll .borda")
+    const deselecionar = document.querySelector(".categoria:nth-child("+ categoria +") .borda")
     if (deselecionar !== null){
     deselecionar.classList.remove("borda")
     }
-    const selecionado = document.querySelector(".menu .categoria:nth-child("+ categoria +") .menu-sidescroll .item:nth-child("+ item +") ")
+    const selecionado = document.querySelector(".categoria:nth-child("+ categoria +") .item:nth-child("+ item +") ")
     selecionado.classList.add("borda")
+    
+    const deselecionarIcone = document.querySelector(".categoria:nth-child("+ categoria +") .aparecer")
+    if (deselecionarIcone !== null){
+    deselecionarIcone.classList.remove("aparecer")
+    }
+    const selecionadoIcone = document.querySelector(".categoria:nth-child("+ categoria +") .item:nth-child("+ item +") ion-icon ")
+    selecionadoIcone.classList.add("aparecer")
     
 
    
     if(categoria === 1){
-        const valorComida = document.querySelector(".menu .categoria:nth-child("+ categoria +") .menu-sidescroll .item:nth-child("+ item +") .valor ")
+        const nomeComida = document.querySelector(".categoria:nth-child("+ categoria +") .item:nth-child("+ item +") .nome-prato ")
+        const valorComida = document.querySelector(".categoria:nth-child("+ categoria +") .item:nth-child("+ item +") .valor ")
         comida = Number(valorComida.innerHTML);
+        const substituirComida = document.querySelector(".comida-final")
+        substituirComida.innerHTML = (nomeComida.innerHTML) 
+        const substituirValorComida = document.querySelector(".valor-comida-final")
+        substituirValorComida.innerHTML = ("R$" + valorComida.innerHTML) 
     }else if(categoria === 2){
-        const valorBebida = document.querySelector(".menu .categoria:nth-child("+ categoria +") .menu-sidescroll .item:nth-child("+ item +") .valor ")
+        const nomeBebida = document.querySelector(".categoria:nth-child("+ categoria +") .item:nth-child("+ item +") .nome-prato ")
+        const valorBebida = document.querySelector(".categoria:nth-child("+ categoria +") .item:nth-child("+ item +") .valor ")
         bebida = Number(valorBebida.innerHTML);
+        const substituirBebida = document.querySelector(".bebida-final")
+        substituirBebida.innerHTML = (nomeBebida.innerHTML) 
+        const substituirValorBebida = document.querySelector(".valor-bebida-final")
+        substituirValorBebida.innerHTML = ("R$" + valorBebida.innerHTML) 
     }else if(categoria === 3){
-        const valorSobremesa = document.querySelector(".menu .categoria:nth-child("+ categoria +") .menu-sidescroll .item:nth-child("+ item +") .valor ")
+        const nomeSobremesa = document.querySelector(".categoria:nth-child("+ categoria +") .item:nth-child("+ item +") .nome-prato ")
+        const valorSobremesa = document.querySelector(".categoria:nth-child("+ categoria +") .item:nth-child("+ item +") .valor ")
         sobremesa = Number(valorSobremesa.innerHTML);
+        const substituirSobremesa = document.querySelector(".sobremesa-final")
+        substituirSobremesa.innerHTML = (nomeSobremesa.innerHTML) 
+        const substituirValorSobremesa = document.querySelector(".valor-sobremesa-final")
+        substituirValorSobremesa.innerHTML = ("R$" + valorSobremesa.innerHTML) 
     }
     total = comida + bebida + sobremesa;
     
+
+
+
     if (comida > 0 && bebida > 0 && sobremesa > 0){
         const ativarBotao = document.querySelector(".msg")
         ativarBotao.classList.add("ativar")
-        ativarBotao.innerHTML = ("<a href='https://wa.me/?text=OIIIIIIIIIIII' target='_blank'>Fechar pedido</a>")
+        ativarBotao.innerHTML = ("Fechar pedido")
+        const substituirTotal = document.querySelector(".total-final")
+        substituirTotal.innerHTML = ("<strong> R$" + total + "</strong>")
     }
-
-    
 }
 
+
+function confirmar(){
+    if (comida > 0 && bebida > 0 && sobremesa > 0){
+        const ativarBotao = document.querySelector(".confirmar-background")
+        ativarBotao.classList.add("aparecer")
+    }
+}
+
+function cancelar(){
+    const ativarBotao = document.querySelector(".confirmar-background")
+        ativarBotao.classList.remove("aparecer")
+}
 
 
