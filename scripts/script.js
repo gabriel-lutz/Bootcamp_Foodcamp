@@ -7,7 +7,6 @@ let nomeSobremesa
 let total = comida + bebida + sobremesa
 
 function selecionar(categoria, item){
-   
     const deselecionar = document.querySelector(".categoria:nth-child("+ categoria +") .borda")
     if (deselecionar !== null){
         deselecionar.classList.remove("borda")
@@ -63,7 +62,6 @@ function confirmar(){
         let endereco = prompt("Qual será o endereço da entrega?")
         const mensagemWhats = encodeURIComponent("Olá, gostaria de fazer o pedido: \n - Prato: " + nomeComida.innerHTML + "\n - Bebida: " + nomeBebida.innerHTML + "\n - Sobremesa: " + nomeSobremesa.innerHTML +"\n Total: R$ "+ total+ "\n \n Nome:" + nome + "\n Endereco:" + endereco)
         const enviarMensagem = document.querySelector(".confirmar")
-        console.log(enviarMensagem)
         enviarMensagem.innerHTML = ("<a href='https://wa.me/?text="+ mensagemWhats +"' target='_blank'><p>Tudo certo, pode pedir!</p></a>")
     }
 }
